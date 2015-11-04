@@ -1,7 +1,19 @@
+/**
+ * Author: Mark Gapasin
+ * Discrete Hopfield Neural Network
+ * Class is used to train the network to stored an image for later recall
+ */
 import java.util.ArrayList;
 
 public class TrainHopfield {
 
+    /**
+     * Calculates weights used for training network.
+     * Network is an auto-associative so uses formula:
+     *      x-input(transposed) * x-input
+     * @param hopfieldList The list of images to recognize and store
+     * @return A Hopfield object with trained weights attribute set for training
+     */
     public Hopfield trainWeights(ArrayList<Hopfield> hopfieldList){
 
         for (Hopfield hopfield: hopfieldList){
@@ -47,6 +59,12 @@ public class TrainHopfield {
         return trainedHopfield; // return trained weights
     }
 
+    /**
+     * Initializes the weights matrix dimensions and sets each position to zero
+     * @param row Row size of the matrix to set to
+     * @param col Column size of the matrix to set to
+     * @return A Hopfield object with its trained weights attribute set to the matrix specified
+     */
     public Hopfield initializeWeightsMatrix(int row, int col){
         ArrayList<Integer> w = new ArrayList<Integer>();
         Hopfield hopfield = new Hopfield();

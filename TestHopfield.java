@@ -1,11 +1,18 @@
+/**
+ * Author: Mark Gapasin
+ * Discrete Hopfield Neural Network
+ * Class is used to test the network if it can recognize a stored image
+ */
+
 import java.util.ArrayList;
 import java.util.Collections;
 
 public class TestHopfield {
     /**
-     * Calculates the y output of the neural net.
-     * @param
-     * @return an integer -1, 1, or y
+     * Calculates the y_in value and uses an activation function to
+     * get y output of a Hopfield object
+     * @param hopfieldList A list of Hopfield objects
+     * @return A list of Hopfield objects with results set in its attributes
      */
     public ArrayList<Hopfield> y_In(ArrayList<Hopfield> hopfieldList){
         int num = 1;
@@ -41,6 +48,13 @@ public class TestHopfield {
         return hopfieldList;
     }
 
+    /**
+     * Formats the new y output results from a 1D Arraylist to a 2D ArrayList
+     * @param results List of y outputs for each Hopfield object
+     * @param col Column size to format results to
+     * @param row Row to size to format results to
+     * @return An ArrayList of Hopfield objects
+     */
     public ArrayList<ArrayList<Integer>> formatResults(ArrayList<Integer> results, int col, int row){
         ArrayList<ArrayList<Integer>> formattedResults = new ArrayList<ArrayList<Integer>>();
         ArrayList<Integer> temp = new ArrayList<Integer>();

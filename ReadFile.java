@@ -1,3 +1,9 @@
+/**
+ * Author: Mark Gapasin
+ * Discrete Hopfield Neural Network
+ * Class read in text files that will be used for training or testing
+ */
+
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.File;
@@ -51,6 +57,10 @@ public class ReadFile {
         return contents;
     }
 
+    /**
+     * Reads in a file, parses its data, and creates Hopfield obects for training
+     * @return An ArrayList of Hopfield objects
+     */
     public ArrayList<Hopfield> readfile(){
         ArrayList<Integer> contents = new ArrayList<Integer>();
         ArrayList<Integer> img_input = new ArrayList<Integer>();
@@ -105,6 +115,10 @@ public class ReadFile {
         return hopfieldList;
     }
 
+    /**
+     * Reads in a file, parses its data, and creates Hopfield obects for testing
+     * @return An ArrayList of Hopfield objects
+     */
     public ArrayList<Hopfield> readTestFile(){
         Hopfield hopfield = new Hopfield();
         ArrayList<Hopfield> hopfieldList = new ArrayList<Hopfield>();
@@ -149,6 +163,10 @@ public class ReadFile {
         return hopfieldList;
     }
 
+    /**
+     * Reads in a trained file, parses its data, and creates Hopfield obects
+     * @return An ArrayList of Hopfield objects
+     */
     public ArrayList<Hopfield> readTrainedFile(ArrayList<Hopfield> hopFieldList){
 
         ArrayList<Integer> w = new ArrayList<Integer>();

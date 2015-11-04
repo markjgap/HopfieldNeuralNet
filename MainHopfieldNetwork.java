@@ -1,3 +1,9 @@
+/**
+ * Author: Mark Gapasin
+ * Discrete Hopfield Neural Network
+ * User interface that will train and test a Hopfield model
+ */
+
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;

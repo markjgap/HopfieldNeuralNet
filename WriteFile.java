@@ -1,13 +1,20 @@
+/**
+ * Author: Mark Gapasin
+ * Discrete Hopfield Neural Network
+ * Class writes text files that have been trained or tested
+ */
+
 import java.util.ArrayList;
 import java.io.*;
 
 public class WriteFile {
 
-    /*
- * Writes the data to a text file
- * @param fName is the file name to write to
- * @param hopfieldList is a list of Hopfield objects
- */
+    /**
+     * Writes the data to a text file
+     * @param fName is the file name to write to
+     * @param trainedHopfield Hopfield object with trained weights
+     * @param hopfieldList is a list of Hopfield objects
+     */
     public void writeFile(String fName, Hopfield trainedHopfield, ArrayList<Hopfield> hopfieldList) {
 
         String fileName = fName;
@@ -47,6 +54,11 @@ public class WriteFile {
         }
     }
 
+    /**
+     * Writes the results to a text file
+     * @param fName is the file name to write to
+     * @param hopfieldList is a list of Hopfield objects
+     */
     public static void writeResultsFile(String fName, ArrayList<Hopfield> hopfieldList){
         String fileName = fName;
         try {

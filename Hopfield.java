@@ -1,3 +1,9 @@
+/**
+ * Author: Mark Gapasin
+ * Discrete Hopfield Neural Network
+ * Class will have all the information needed to store and recognize/recall an image
+ */
+
 import java.util.ArrayList;
 
 public class Hopfield {
@@ -63,9 +69,7 @@ public class Hopfield {
         return inputs;
     }
 
-    public int getDimensions(){
-        return dimensions;
-    }
+    public int getDimensions(){ return dimensions; }
 
     public int getNumOfImageVectors(){
         return numOfImageVectors;
@@ -85,10 +89,6 @@ public class Hopfield {
 
     public int getTarget(int row, int col){
         return target.get(row).get(col);
-    }
-
-    public ArrayList<Integer> getTargetList(){
-        return target.get(0);
     }
 
     public int getResultsList(int row, int col){
