@@ -98,7 +98,5 @@ public class MainHopfieldNetwork {
                 throw (e);
             }
         }
-
-
     }
 }
